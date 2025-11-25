@@ -32,7 +32,15 @@ def load_participants():
                 except json.JSONDecodeError:
                     return []  # Если ошибка — возвращаем пустой список
     return []
-    
+
+async def main():
+    print(f"Рабочая директория: {os.getcwd()}")
+    print(f"Файл участников: {PARTICIPANTS_FILE.absolute()}")
+    print(f"Файл существует: {PARTICIPANTS_FILE.exists()}")
+
+    asyncio.create_task(check_and_send_reminder())
+    await dp.start_polling(bot)
+	
 # Сохраняем участника по username (если username нет — по first_name, но это менее надёжно)
 def save_participant(user_data):
     participants = load_participants()
@@ -579,5 +587,6 @@ async def main():
 if __name__ == "__main__":
 
     asyncio.run(main())
+
 
 
