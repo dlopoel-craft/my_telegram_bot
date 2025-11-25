@@ -8,14 +8,18 @@ import datetime
 import random
 from pathlib import Path
 
+# Загружаем .env
+load_dotenv()
+
 # Получаем токен из переменной окружения
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 if not BOT_TOKEN:
     raise ValueError("Токен бота не найден в файле .env")
 
-# Путь к файлу участников
-PARTICIPANTS_FILE = Path("participants.json")
+# ПРАВИЛЬНЫЙ ПУТЬ к файлу участников
+BASE_DIR = Path(__file__).parent
+PARTICIPANTS_FILE = BASE_DIR / "participants.json"
 
 # Загружаем список участников при запуске
 def load_participants():
@@ -575,4 +579,5 @@ async def main():
 if __name__ == "__main__":
 
     asyncio.run(main())
+
 
