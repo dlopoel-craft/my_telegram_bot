@@ -372,13 +372,13 @@ async def handle_gift_button(call: types.CallbackQuery):
 @dp.callback_query(lambda call: call.data == "will_come")
 async def handle_will_come(call: types.CallbackQuery):
     username = call.from_user.username
-    first_name = call.from_user.first_name
+    first_name = call.from_user.first_name or "Друг"  # ← добавлено
 
     user_data = {
-        "user_id": call.from_user.id,  # ← обязательно!
+        "user_id": call.from_user.id,
         "username": username or "Не указан",
-        "first_name": first_name,
-        "status": "no_response",
+        "first_name": first_name,  # ← обязательно!
+        "status": "confirmed",
         "date": "2025-12-06T19:00:00",
         "address": "г. Рязань, ул. Пугачева, д. 10, кв. 18"
     }
@@ -398,7 +398,7 @@ async def handle_will_come(call: types.CallbackQuery):
 @dp.callback_query(lambda call: call.data == "will_not_come")
 async def handle_will_not_come(call: types.CallbackQuery):
     username = call.from_user.username
-    first_name = call.from_user.first_name
+    first_name = call.from_user.first_name or "Друг"  # ← добавлено
 
     user_data = {
         "user_id": call.from_user.id,  # ← обязательно!
@@ -422,7 +422,7 @@ async def handle_will_not_come(call: types.CallbackQuery):
 @dp.callback_query(lambda call: call.data == "change_decision")
 async def handle_change_decision(call: types.CallbackQuery):
     username = call.from_user.username
-    first_name = call.from_user.first_name
+    first_name = call.from_user.first_name or "Друг"  # ← добавлено
 
     user_data = {
         "user_id": call.from_user.id,  # ← обязательно!
@@ -463,7 +463,7 @@ async def reset_gifts(message: types.Message):
     
 @dp.message(Command("list"))
 async def list_participants(message: types.Message):
-    if message.from_user.id != 1353926244:  # 🔐 ТВОЙ ID
+    if message.from_user.id != 1353926244:
         await message.answer("Эта команда доступна только владельцу бота.")
         return
 
@@ -474,8 +474,8 @@ async def list_participants(message: types.Message):
 
     text = "✅ Участники праздника:\n\n"
     for p in participants:
-        first_name = p["first_name"]
-        username = p["username"]
+        first_name = p.get("first_name", "Неизвестно")  # ← get() вместо []
+        username = p.get("username", "Не указан")
         status = p.get("status", "no_response")
         if status == "confirmed":
             status_text = "✅"
@@ -575,4 +575,5 @@ async def main():
 if __name__ == "__main__":
 
     asyncio.run(main())
+
 
