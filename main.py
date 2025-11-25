@@ -8,12 +8,6 @@ import datetime
 import random
 from pathlib import Path
 
-# Загружаем переменные окружения из .env
-load_dotenv()
-
-# Получаем токен из переменной окружения
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-
 if not BOT_TOKEN:
     raise ValueError("Токен бота не найден в файле .env")
 
@@ -576,4 +570,5 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
+
     asyncio.run(main())
