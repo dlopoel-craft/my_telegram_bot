@@ -1,0 +1,36 @@
+cd c:\my-telegram-bot
+
+venv\Scripts\activate
+
+python main.py
+
+1353926244 - телеграм id
+
+Стикеры
+Alfa dog dance - CAACAgIAAxkBAAIBE2ki32fa1zZsz_DJGDQhV6BJLQbCAAKzCwACKlBRSiyjtgnsadPWNgQ
+Alfa dog палец вверх - CAACAgIAAxkBAAIBFGki33a60fGGCERqr4u_41ZVr3ILAAIuAQAC9wLIDz2WPqTCJacaNgQ
+Alfa dog плачет - CAACAgIAAxkBAAIBFWki34lp3tGyZ-eZ06mFrw95ptXbAAInAQAC9wLID-9HhEodcwYsNgQ
+Alfa dog щелкает пальцами как Герман - CAACAgIAAxkBAAIBFmki36Ce5yk3UR-OKI_NbDrByuTiAAIsAQAC9wLID6abwCn6K4ldNgQ
+Гладит кота - CAACAgIAAxkBAAIBF2ki4A-ahIdjkcmLttZW96J5Z-llAALTRgACH0tZSNhPyifcQcRnNgQ
+Гладит щечку кота - CAACAgIAAxkBAAIBGGki4Dc_p6rNax7w9awr0MHtXxk4AALRJQACN3uwSmqrpV8zXhDiNgQ
+
+Gif
+Wazzup - CgACAgQAAxkBAAIBGWki4FMy-SkzI2bWpgqZRmXGtdFoAAJ_BAACKjTNUv8rzrUQbw7rNgQ
+Это просто ахуенно - CgACAgQAAxkBAAIBGmki4Hhzz9QCkzMSdjeMZ_XA2jSGAALMCAACQDp1UZTyWFKLbjQMNgQ
+Джим керри палец вверх - CgACAgQAAxkBAAIBG2ki4LbvEcLA4pUmaQ10dbtfiCx3AAISAwAC1vFMU2dEv4AWkvUcNgQ
+Николас кейдж для Сани - CgACAgQAAxkBAAIBXWki-Z0-oOGCKnMqL4hzweCZlsVTAALxBgACziclU7qQ2z66TCvFNgQ
+Сериал друзья прыгают - CgACAgQAAxkBAAICjGkji8YuFAymc_ajIBLOOd8op4XZAAKhBgACsAm1Uj5liQt684BHNgQ
+Сериал друзья знак рукой для Димана - CgACAgQAAxkBAAICjmkjjOocls-BsN8WK8mXGvCdOyyqAALsBAACORStUsjZrX5vPEONNgQ
+
+
+	"qdlopoelp": {
+        "message": "БРАТАААААААААН!",
+        "gif": "CgACAgQAAxkBAAIBGWki4FMy-SkzI2bWpgqZRmXGtdFoAAJ_BAACKjTNUv8rzrUQbw7rNgQ",
+        "audio_file_id": "CQACAgIAAxkBAAPUaSIxQ59X2NkfYnIsjP5hNoErW7kAAhaRAAIt3RBJwGOBwOC_tcE2BA"
+
+
+Музыка:
+Йоп Шоу Не старейте да и хуй бы с вами - CQACAgIAAxkBAAICe2kjhnaWtnum5X4eKivlQpGZOovjAALglwACLd0YSVpEkBc7Wp-UNgQ
+Усы как у бати - CQACAgIAAxkBAAICfWkjhs4MSFIJK2BgXwrGIy7yqye7AALilwACLd0YSfbVkRLeRRWFNgQ
+Пневмослон - чувствовать себя старым - CQACAgIAAxkBAAICfmkjhxfmjEeXoNTIHYKc5EJW2TqtAALmlwACLd0YSTkUVZ9eoCEKNgQ
+Биртман Сидр - CQACAgIAAxkBAAICgGkjh0KsyEi4AAG292Hi8vAqY_HbnAAC6JcAAi3dGEmwA0s4DmlLwjYE
